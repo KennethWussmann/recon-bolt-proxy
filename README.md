@@ -50,18 +50,13 @@ Riot Games configured their CloudFlare to block requests coming from the Recon B
 
 It's packaged as a Docker image and can run locally in your computer when you want to use the app.
 
-## Disclaimer
+---
 
-<small>
+<sup><sub>
 Riot Games™ and Valorant™ are trademarks or registered trademarks of Riot Games, Inc. This project is not affiliated with, endorsed, or sponsored by Riot Games, Inc., Valorant, or the Recon Bolt app.
-
 The `recon-bolt-proxy` is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
-
 The usage of this proxy server may violate the terms of service of Riot Games or Valorant. Riot Games could detect the usage of Recon Bolt via this proxy and decide to ban your account. By using `recon-bolt-proxy`, you understand and accept these risks.
-
 In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
-
 Remember, I'm not redistributing the app Recon Bolt. This proxy only works if you still happen to have Recon Bolt installed on your device right now. I don't guarantee that any of this works/continues to work.
-
 The use of `recon-bolt-proxy` is at your own risk.
-</small>
+</sub></sup>

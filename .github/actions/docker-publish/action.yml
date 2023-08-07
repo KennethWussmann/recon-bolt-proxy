@@ -1,0 +1,34 @@
+name: docker-publish
+description: Publish the Docker image to GH Container Registry
+inputs:
+  githubToken:
+    description: 'Token to access private GH Docker registry'
+    required: true
+  tags:
+    description: 'Tags to assign for the published docker container'
+    required: true
+  build-args:
+    description: 'Build args'
+    required: false
+runs:
+  using: 'composite'
+  steps:
+    - name: Login to GitHub Packages Docker Registry
+      uses: docker/login-action@v2
+      with:
+        username: ${{ github.repository_owner }}
+        password: ${{ inputs.githubToken }}
+        registry: ghcr.io
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@master
+      with:
+        platforms: all
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@master
+    - name: Build and push multi-arch
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        platforms: linux/amd64,linux/arm64
+        tags: ${{ inputs.tags }}
+        build-args: ${{ inputs.build-args }}

@@ -1,0 +1,28 @@
+name: release-docker-latest
+
+on:
+  push:
+    tags:
+      - "*"
+
+concurrency: release-docker-latest
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  release:
+    runs-on: buildjet-8vcpu-ubuntu-2204-arm
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get version
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - uses: ./.github/actions/docker-publish
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          tags: ghcr.io/kennethwussmann/recon-bolt-proxy:${{ steps.vars.outputs.tag }},ghcr.io/kennethwussmann/recon-bolt-proxy:latest
+          build-args: VERSION=${{ steps.vars.outputs.tag }}

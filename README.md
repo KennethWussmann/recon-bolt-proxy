@@ -1,5 +1,3 @@
-# recon-bolt-proxy
-
 <div align="center">
   <h1>🏹 <code>recon-bolt-proxy</code></h1>
   <p>

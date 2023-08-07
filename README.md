@@ -46,9 +46,9 @@ The for me most best part still works without proxy, the iOS widget, because it 
 
 ### 🔮 How the proxy works
 
-Riot Games configured their CloudFlare to block requests coming from the Recon Bolt app based on it's User-Agent. The proxy uses mitmproxy to intercept and modify requests by the iOS App to change the User-Agent to something else.
+Riot Games configured their CloudFlare to block requests coming from the Recon Bolt app based on it's User-Agent. The proxy uses mitmproxy to intercept and modify requests by the iOS app to change the User-Agent to something else.
 
-It's packaged as a Docker image and can run locally in your computer when you want to use the app.
+It's packaged as a Docker image and can run locally on your computer when you want to use the app.
 
 ---
 

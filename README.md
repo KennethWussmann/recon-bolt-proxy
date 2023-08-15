@@ -7,9 +7,11 @@
 
 ## 🚢 Usage
 
-The container can be hosted on your computer or a Raspberry PI, almost anything that can run [Docker](https://www.docker.com/).
+Setting it up requires some technical knowledge, but it works on Windows, macOS, and Linux.
+The container can be hosted on your computer or a Raspberry PI, almost anything that can run [Docker](https://www.docker.com/). 
 
-1. Setup using Docker Compose:
+1. Install [Docker](https://www.docker.com/)
+1. Add the following content into a `docker-compose.yml` file:
 
 ```YAML
 version: "3.9"
@@ -23,13 +25,14 @@ services:
       #- 8081:8081
 ```
 
-2. Connect your iPhone to the proxy server
+2. Start the container with the command `docker compose up -d`. Run it in a terminal in the same directory as the file. Refer to [Docker Compose Guide](https://docs.docker.com/get-started/08_using_compose/) for more info.
+3. Connect your iPhone to the proxy server
 
-- Settings > WiFi > `<Your Network>` > Configure Proxy > Manual > Enter IP of server running proxy and port `8080`
+- Settings > WiFi > `<Your Network>` > Configure Proxy > Manual > [Enter IP of computer](https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9) running proxy and port `8080`
 
-3. Head over to [http://mitm.it](http://mitm.it)
-4. Follow the instructions on that page (download certificate, install profile, trust certificate)
-5. Done! The will now load successfully again.
+4. Head over to [http://mitm.it](http://mitm.it) on your iPhone
+5. Follow the instructions on that page (download certificate, install profile, trust certificate)
+6. Done! The app will now load successfully again.
 
 ⭐ If you bought the Recon Bolt Pro features, they will work too!
 

@@ -10,5 +10,5 @@ class ModifyUserAgent:
             flow.request.headers['User-Agent'] = self.new_user_agent
 
 addons = [
-    ModifyUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_8 rv:6.0) Gecko/20210828 Firefox/35.0")
+    ModifyUserAgent("Mozilla/5.0 (compatible; MSIE 11.0; Windows; Windows NT 10.0; Trident/7.0)")
 ]

@@ -3,7 +3,7 @@ LABEL org.opencontainers.image.source https://github.com/KennethWussmann/recon-b
 
 WORKDIR /app
 
-ADD modify_reconbolt_useragent.py .
+ADD modify_reconbolt_requests.py .
 ADD entrypoint.sh .
 
 EXPOSE 8080

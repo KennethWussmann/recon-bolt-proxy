@@ -38,6 +38,9 @@ services:
 
 > ‼️ You need to stay connected to the proxy to use the app (the widget works without the proxy)
 
+> [!IMPORTANT]  
+> You need to disable 2FA in your Riot Games account to continue using the Recon Bolt app. They stopped sending 2FA emails from the outdated app. 
+
 ## 😢 Background
 
 See also: [Recon Bolt: Riot Shuts Down App](https://earlygame.com/valorant/bye-bye-recon-bolt-riot-shuts-down-app-due-to-instalocking)

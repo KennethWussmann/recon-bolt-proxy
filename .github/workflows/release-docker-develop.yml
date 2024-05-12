@@ -12,7 +12,7 @@ env:
 
 jobs:
   release:
-    runs-on: buildjet-8vcpu-ubuntu-2204-arm
+    runs-on: [self-hosted, arm64, cb]
     permissions:
       packages: write
       contents: read
